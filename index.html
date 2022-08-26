@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom property</title>
+    <style>
+        :root {
+            --side-width: 200px;
+            --dark-border: 2px solid black;
+            --main-color: orange;
+            --boder-color: slateblue;
+            --background-color: slateblue;
+        }
+
+        h1 {
+            color: var(--main-color)
+        }
+
+        p {
+            color: var(--main-color);
+        }
+
+        h2 {
+            border: 2px solid var(--boder-color);
+            color: var(--main-color);
+        }
+
+        h6 {
+            background-color: var(--background-color);
+        }
+
+        footer {
+            text-align: center;
+            clear: both;
+            border: var(--dark-border);
+            color: var(--main-color);
+        }
+
+        .size-nav,
+        .blogs {
+            float: left;
+            height: 500px;
+        }
+
+        aside {
+            background-color: springgreen;
+            width: 200px;
+        }
+
+        .blogs {
+            background-color: tomato;
+            width: calc(100% - 3*var(--side-width));
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>I am exploring custom propertys</h1>
+        <p>welcome to my websize</p>
+        <main>
+            <h2>my awsome contant</h2>
+            <h6>my tainy hading</h6>
+            <section>
+                <aside class="size-nav">
+                    my size navigation
+                </aside>
+                <div class="blogs">
+                    <h4>
+                        blogs
+                    </h4>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><small>copyright-2022</small></p>
+        </footer>
+    </header>
+</body>
+</html>
